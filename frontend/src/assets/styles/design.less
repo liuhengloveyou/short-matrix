@@ -1,0 +1,112 @@
+@import './color.less';
+// design index page
+@color4: #50555b;
+@color5: #808080;
+@width0: 1180px;
+@width1: 120px;
+@width2: 100%;
+@height2: 54px;
+
+@canvasBG: #f8f8f8;
+@pageBG: #f0f2f5;
+@canvasDeepBG: #000;
+
+.page-design-bg-color {
+  background-color: @canvasDeepBG;
+}
+.page-bg-color {
+  background-color: @pageBG;
+}
+
+#page-design-index {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 500px;
+  min-width: @width0;
+  position: absolute;
+  width: @width2;
+  background-color: @canvasBG;
+  .top-nav {
+    height: @height2;
+    min-width: @width0;
+    position: relative;
+    width: @width2;
+    .top-nav-wrap {
+      border-bottom: 1px solid rgba(202, 119, 119, 0.1);
+      align-items: center;
+      background-color: @color-main;
+      display: flex;
+      height: @height2;
+      min-width: @width0;
+      position: fixed;
+      width: @width2;
+      .top-left {
+        display: flex;
+        align-items: center;
+        color: @color-black;
+        .name {
+          margin: 0 1rem;
+          // font-weight: bold;
+          cursor: pointer;
+          letter-spacing: 2px;
+          color: #333;
+          font-size: 22px;
+          font-family: TitleFont, PingFangSC-Semibold, PingFang SC;
+        }
+        .operation {
+          display: flex;
+          &-item {
+            padding: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            .icon {
+              // font-size: 18px;
+              color: #333333;
+            }
+            .iconfont {
+              font-size: 14px;
+            }
+            .text {
+              font-weight: 600;
+              margin-left: .4rem;
+            }
+          }
+          .disable {
+            cursor: not-allowed;
+            color: #c2c2c2;
+          }
+        }
+      }
+      .primary-btn {
+        font-weight: 600;
+        transform: scale(0.95);
+        margin-left: 10px;
+      }
+    }
+  }
+  .page-design-index-wrap {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    width: @width2;
+    .page-design-wrap {
+      flex: 1;
+    }
+  }
+  // .page-design-index-wrap ::-webkit-scrollbar {
+  //   display: none; /* Chrome Safari */
+  // }
+  .shelter,
+  .shelter-bg {
+    position: absolute;
+    pointer-events: none;
+  }
+  .shelter {
+    box-shadow: 0 0 0 5000px rgba(248, 248, 248, 0.99);
+    z-index: 8;
+  }
+}

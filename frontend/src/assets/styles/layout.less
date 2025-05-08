@@ -1,0 +1,36 @@
+.editable-text {
+  outline: none;
+  word-break: break-word;
+  white-space: pre;
+  margin: 0;
+}
+
+.line-clamp-2 {
+  // display: -webkit-box !important;
+  // -webkit-box-orient: vertical !important;
+  // overflow: hidden !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; //作为弹性伸缩盒子模型显示。
+  -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式--从上到下垂直排列
+}
+
+.line-clamp-1 {
+  // -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.transparent-bg {
+  background-color: #f0f0f0;
+  background-image: linear-gradient(to top right, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), linear-gradient(to top right, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+  overflow: hidden;
+  user-select: none;
+}
